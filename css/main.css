@@ -1,0 +1,130 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-family: arial;
+}
+header{
+	z-index: 1;
+	width: 1204px;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+header ul{
+	text-align: right;
+}
+header ul li{
+	display: inline-block;
+}
+header ul li a{
+	color: white;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 15px;
+	text-transform: uppercase;
+	padding: 35px 25px 35px 25px;
+	display: block;
+	text-decoration: none;
+}
+header ul li:hover{
+	text-decoration: underline;
+}
+.main-upper-section{
+	background:url(../images/background.jpg) no-repeat fixed;
+	background-size: 1200px 730px;
+
+}
+.upper-section{
+	padding: 133px 0;
+	background-color: rgba(0,0,0,0.6);
+	color: white;
+	text-align: center;
+
+}
+.upper-section h1{
+	padding: 150px 0 30px 0;
+	text-transform: uppercase;
+    font-size: 70px;
+}
+.upper-section p:first-of-type{
+	font-size: 25px;
+	padding: 30px;
+}
+.upper-section p:last-of-type{
+	font-size: 15px;
+	margin-top: 40px;
+	text-transform: uppercase;
+}
+.upper-section p a{
+	padding: 20px;
+	display: inline-block;
+	text-decoration: none;
+	border: 1px solid white;
+	border-radius: 5px;
+	color: white;
+}
+.upper-section p a:hover{
+	background-color: rgba(255,255,255,0.7);
+	color: black;
+}
+.hidden{
+	animation: opps 0.5s;
+	opacity: 0;
+}
+@keyframes opps {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.visible{
+	animation: opp 0.5s;
+	opacity: 1;
+}
+@keyframes opp {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.portfolio-section{
+	color: gray;
+	background-color: rgba(125,124,125,0.1);
+	text-align: center;
+	padding: 100px 0;
+}
+.portfolio-section h1{
+	padding-bottom: 20px;
+    font-size: 70px;
+    text-transform: uppercase;
+}
+.portfolio-section p{
+	font-size: 20px;
+	padding: 10px;
+}
+.work-section {
+	color: white;
+	background-color: #016052;
+	padding: 100px 0;
+	text-align: center;
+
+}
+.work-section h1{
+	padding: 20px;
+	text-transform: uppercase;
+	font-size: 50px;
+}
+.work-section p{
+	font-size: 20px;
+}
+.about-section{
+	text-align: center;
+	padding: 80px 0;
+}
+.about-section h1{
+	text-transform: uppercase;
+	font-size: 50px;
+    padding: 20px;
+}
+.about-section p{
+	font-size: 20px;
+}
