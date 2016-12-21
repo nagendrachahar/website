@@ -3,31 +3,32 @@
 	<head>
 		<title>shivam-chahar</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<!--<link rel="stylesheet" media="" href="">-->
+		<script src="jquery/main-jquery.js"></script>
+		<script src="jquery/home-page.js"></script>
 	</head>
 	<body>
 	    <header>
 		    	<ul id="list">
-		    		<li>
-		    			<a onclick="myFunction()">portfolio</a>
+		    		<li id="portfolioButton">
+		    			<a href="#">portfolio</a>
 		    		</li>
 		    		<li id="workButton">
-		    			<a href="#bottomSection">recent work</a>
+		    			<a href="#">recent work</a>
 		    		</li>
-		    		<li>
+		    		<li id="aboutButton">
 		    			<a href="#">about</a>
 		    		</li>
-		    		<li>
+		    		<li id="contactButton">
 		    			<a href="#">contact</a>
 		    		</li>
 		    	</ul>
 		</header>
-	    <section id="opo" class="main-upper-section">
+	    <section id="mainUpperSection" class="main-upper-section">
 		    
 		    <section id="pop" class="upper-section">
 		    	<h1 class="visible" id="Name">shivam chahar</h1>
 		    	<p class="visible" id="firstP">I am a web designer and front-end developer</p>
-		    	<p class="visible" id="lastP"><a href="#bottomSection">check my work</a></p>
+		    	<p class="visible" id="lastP"><a href="#">check my work</a></p>
 		    </section>
 	    </section>
 	    <script src="javascript/home-page.js"></script>
@@ -45,6 +46,18 @@
 	    	<h1>about me</h1>
 	    	<p>Hi, I am Shivam.I'm a fresher in web development.</p>
 	    	<p>I am interested in web development.</p>
+	    	<h2>My Key Skills</h2>
+	    	<ul>
+	    		<li><span class="key-skills">HTML</span><span class="status-bar"> </span></li>
+	    		<li><span class="key-skills">CSS</span><span class="status-bar"> </span></li>
+	    		<li><span class="key-skills">JavaScript</span><span class="status-bar"> </span></li>
+	    		<li><span class="key-skills">jQuery</span><span class="status-bar"> </span></li>
+	    	</ul>
+	    </section>
+	    <section class="contact-section">
+	    	<h1>ok, let's create<br>something great</h1>
+	    	<p>If you like my work and have some cool project to work on, just send<br> me direct message or contact me through social sites listed below.</p>
+	    	<p><small><a href="#">Twitter</a><a href="#">Facebook</a><a href="#">Instagram</a></small></p>
 	    </section>
 	</body>
 </html>
