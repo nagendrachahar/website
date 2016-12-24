@@ -4,33 +4,37 @@ function myFunction(){
     var firstP = document.getElementById("firstP");
     var lastP = document.getElementById("lastP");
     var list = document.getElementById("list");
-	console.log(document.documentElement.scrollTop);
-	if(document.documentElement.scrollTop > 100 || document.body.scrollTop > 100){
+    //for chrome
+    var bodyScroll = document.documentElement.scrollTop;
+    //for firefox
+    var documentScroll = document.body.scrollTop;
+
+	if(bodyScroll > 100 || documentScroll > 100){
 		Name.className = "hidden";
 	} else{
 		Name.className = "visible";
 	}
 
-	if(document.documentElement.scrollTop > 200 || document.body.scrollTop > 200){
+	if(bodyScroll > 200 || documentScroll > 200){
 		firstP.className = "hidden";
 	}else{
 		firstP.className = "visible";
 	}
 
-    if(document.documentElement.scrollTop > 300 || document.body.scrollTop > 300){
+    if(bodyScroll > 300 || documentScroll > 300){
     	lastP.className = "hidden";
     }else{
     	lastP.className = "visible";
     }
 
-	if (document.documentElement.scrollTop > 625 || document.body.scrollTop > 625) {
+	if (bodyScroll > 625 || documentScroll > 625) {
 		list.style.backgroundColor = "rgba(0,0,0,1)";
 		list.style.boxShadow = "0" + " " + "5px" + " " + "15px" + " " + "gray";
 	}else {
 		list.style.backgroundColor = "rgba(0,0,0,0)";
 		list.style.boxShadow = "none";
 	}
-	var scrollBackground = document.body.scrollTop + document.documentElement.scrollTop;
+	var scrollBackground = bodyScroll + documentScroll;
 
 	document.getElementById("mainUpperSection").style.backgroundPosition = "50%" + " " + -scrollBackground * 0.2 + "px";
 	
@@ -40,9 +44,14 @@ window.onscroll = function() {
 	myFunction();
 	progress();
 }
+
 function scrollPortfolio() {
-        if(document.documentElement.scrollTop > 550 || document.body.scrollTop > 550){
-		    var scrolltop = document.documentElement.scrollTop + document.body.scrollTop;
+	//for chrome
+    var bodyScroll = document.documentElement.scrollTop;
+    //for firefox
+    var documentScroll = document.body.scrollTop;
+        if(bodyScroll > 550 || documentScroll > 550){
+		    var scrolltop = bodyScroll + documentScroll;
 		    var id = setInterval(frame, 1);
             function frame(){
 		        if (scrolltop < 550) {
@@ -56,7 +65,7 @@ function scrollPortfolio() {
 		    }
         }
 		else{
-			var scrolltop = document.documentElement.scrollTop + document.body.scrollTop;
+			var scrolltop = bodyScroll + documentScroll;
 			var id = setInterval(frame, 1);
 		  	function frame(){
 		    	if (scrolltop > 550) {
@@ -64,7 +73,7 @@ function scrollPortfolio() {
 		        }
 		        else {
 		            scrolltop = scrolltop + 5; 
-		            document.documentElement.scrollTop = scrolltop; 
+		            document.documentElement.scrolltop = scrolltop; 
 		            document.body.scrollTop = scrolltop;
 		        }
 		    }
@@ -75,8 +84,12 @@ document.getElementById("portfolioButton").addEventListener("click", function(){
 });
 
 function scrollWork() {
-        if(document.documentElement.scrollTop > 900 || document.body.scrollTop > 900){  
-		    var scrolltop = document.documentElement.scrollTop + document.body.scrollTop;
+	//for chrome
+    var bodyScroll = document.documentElement.scrollTop;
+    //for firefox
+    var documentScroll = document.body.scrollTop;
+        if(bodyScroll > 900 || documentScroll > 900){
+		    var scrolltop = bodyScroll + documentScroll;
 		    var id = setInterval(frame, 1);
             function frame(){
 		        if (scrolltop < 900) {
@@ -90,7 +103,7 @@ function scrollWork() {
 		    }
         }
 		else{
-			var scrolltop = document.documentElement.scrollTop + document.body.scrollTop;
+			var scrolltop = bodyScroll + documentScroll;
 			var id = setInterval(frame, 1);
 		  	function frame(){
 		    	if (scrolltop > 900) {
@@ -98,7 +111,7 @@ function scrollWork() {
 		        }
 		        else {
 		            scrolltop = scrolltop + 5; 
-		            document.documentElement.scrollTop = scrolltop; 
+		            document.documentElement.scrolltop = scrolltop; 
 		            document.body.scrollTop = scrolltop;
 		        }
 		    }
@@ -109,8 +122,12 @@ document.getElementById("workButton").addEventListener("click", function(){
 });
 
 function scrollAbout() {
-        if(document.documentElement.scrollTop > 1250 || document.body.scrollTop > 1250){  
-		    var scrolltop = document.documentElement.scrollTop + document.body.scrollTop;
+	//for chrome
+    var bodyScroll = document.documentElement.scrollTop;
+    //for firefox
+    var documentScroll = document.body.scrollTop;
+        if(bodyScroll > 1250 || documentScroll > 1250){
+		    var scrolltop = bodyScroll + documentScroll;
 		    var id = setInterval(frame, 1);
             function frame(){
 		        if (scrolltop < 1250) {
@@ -124,7 +141,7 @@ function scrollAbout() {
 		    }
         }
 		else{
-			var scrolltop = document.documentElement.scrollTop + document.body.scrollTop;
+			var scrolltop = bodyScroll + documentScroll;
 			var id = setInterval(frame, 1);
 		  	function frame(){
 		    	if (scrolltop > 1250) {
@@ -132,7 +149,7 @@ function scrollAbout() {
 		        }
 		        else {
 		            scrolltop = scrolltop + 5; 
-		            document.documentElement.scrollTop = scrolltop; 
+		            document.documentElement.scrolltop = scrolltop; 
 		            document.body.scrollTop = scrolltop;
 		        }
 		    }
@@ -140,5 +157,43 @@ function scrollAbout() {
 }
 document.getElementById("aboutButton").addEventListener("click", function(){
 	scrollAbout();
+});
+
+function scrollContact() {
+	//for chrome
+    var bodyScroll = document.documentElement.scrollTop;
+    //for firefox
+    var documentScroll = document.body.scrollTop;
+        if(bodyScroll > 1773 || documentScroll > 1773){
+		    var scrolltop = bodyScroll + documentScroll;
+		    var id = setInterval(frame, 1);
+            function frame(){
+		        if (scrolltop < 1773) {
+		            clearInterval(id);
+		        }
+		        else {
+		            scrolltop = scrolltop - 5; 
+		            document.documentElement.scrollTop = scrolltop; 
+		            document.body.scrollTop = scrolltop;
+		        }
+		    }
+        }
+		else{
+			var scrolltop = bodyScroll + documentScroll;
+			var id = setInterval(frame, 1);
+		  	function frame(){
+		    	if (scrolltop > 1773) {
+		            clearInterval(id);
+		        }
+		        else {
+		            scrolltop = scrolltop + 5; 
+		            document.documentElement.scrolltop = scrolltop; 
+		            document.body.scrollTop = scrolltop;
+		        }
+		    }
+		}
+}
+document.getElementById("contactButton").addEventListener("click", function(){
+	scrollContact();
 });
 
