@@ -7,3 +7,10 @@ $(document).ready(function() {
 
 }
 }
+
+$(document).ready(function(){
+	$(".dropdown-list").hide();
+	$(".menu").click(function(){
+		$(".dropdown-list").toggle(1000);
+	});
+});

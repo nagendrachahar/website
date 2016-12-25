@@ -12,13 +12,15 @@ header{
 	top: 0;
 	left: 0;
 }
-header ul{
+header .list{
+	background: url(../images/s-c-logo.gif) no-repeat 5px 5px;
+	background-size: 75px 75px;
 	text-align: right;
 }
-header ul li{
+header .list li{
 	display: inline-block;
 }
-header ul li a{
+header .list li a{
 	color: white;
 	cursor: pointer;
 	font-weight: bold;
@@ -28,8 +30,11 @@ header ul li a{
 	display: block;
 	text-decoration: none;
 }
-header ul li:hover{
+header .list li:hover{
 	text-decoration: underline;
+}
+.dropdown-list,.menu{
+	display: none;
 }
 .main-upper-section{
 	background:url(../images/background.jpg) no-repeat fixed;
@@ -43,7 +48,7 @@ header ul li:hover{
 
 }
 .upper-section h1{
-	padding: 150px 0 30px 0;
+	padding: 150px 10px 30px 10px;
 	text-transform: uppercase;
     font-size: 70px;
 }
@@ -180,4 +185,55 @@ header ul li:hover{
 }
 .contact-section p a:hover{
 	background: rgba(255,255,255,0.4);
+}
+@media only screen and (max-width: 1000px){
+    .upper-section{
+    	padding: 50px 0;
+    }
+
+
+}
+@media only screen and (max-width: 750px) {
+    .main-upper-section{
+    	background: black;
+    }
+    
+}
+@media only screen and (max-width: 650px) {
+    .upper-section h1{
+		padding: 50px 10px 30px 10px;
+	    font-size: 50px;
+    }
+    .portfolio-section h1,.work-section h1,.about-section h1{
+		font-size: 50px;
+	    
+    }
+    .portfolio-section p,.work-section p,.about-section p{
+    	font-size: 18px;
+    }
+    .list {
+    	display: none;
+    }
+    .menu{
+    	background: white;
+    	border: 1px solid white;
+    	display: block;
+    	color: black;
+    	padding: 12px;
+
+    }
+    .dropdown-list {
+    	margin-top: 50px;
+    	text-transform: uppercase;
+        display: block;
+        background: white;
+        text-align: center;
+
+    }
+    .dropdown-list li {
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+    
 }
