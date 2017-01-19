@@ -9,8 +9,8 @@ $(document).ready(function() {
 }
 
 $(document).ready(function(){
-	$(".dropdown-list").hide();
+	$(".dropdown-list").slideUp();
 	$(".menu").click(function(){
-		$(".dropdown-list").toggle(1000);
+		$(".dropdown-list").slideToggle(1000);
 	});
 });
