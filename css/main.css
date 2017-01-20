@@ -12,15 +12,16 @@ header{
 	top: 0;
 	left: 0;
 }
-header .list{
-	background: url(../images/s-c-logo.gif) no-repeat 5px 5px;
+.list{
+	background: url(../images/ns.png) no-repeat 5px 5px;
 	background-size: 75px 75px;
 	text-align: right;
+	height: 87px; 
 }
-header .list li{
+.list li{
 	display: inline-block;
 }
-header .list li a{
+.list li a{
 	color: white;
 	cursor: pointer;
 	font-weight: bold;
@@ -30,7 +31,7 @@ header .list li a{
 	display: block;
 	text-decoration: none;
 }
-header .list li:hover{
+.list li:hover{
 	text-decoration: underline;
 }
 .dropdown-list,.menu{
@@ -160,12 +161,11 @@ header .list li:hover{
 .contact-section{
 	text-align: center;
 	background: #016052;
-    padding: 100px;
     color: white;
 }
 .contact-section h1{
 	text-transform: uppercase;
-	padding: 30px;
+	padding: 20px;
 	font-size: 40px;
 }
 .contact-section p{
@@ -200,6 +200,10 @@ header .list li:hover{
     
 }
 @media only screen and (max-width: 650px) {
+	header{
+		position:static;
+		background: black;
+	}
     .upper-section h1{
 		padding: 50px 10px 30px 10px;
 	    font-size: 50px;
@@ -211,29 +215,34 @@ header .list li:hover{
     .portfolio-section p,.work-section p,.about-section p{
     	font-size: 18px;
     }
-    .list {
-    	display: none;
-    }
     .menu{
-    	background: white;
+		background: url(../images/list.png) black no-repeat 10px 5px;
+		background-size: 30px 30px;
     	border: 1px solid white;
     	display: block;
-    	color: black;
-    	padding: 12px;
+    	color: white;
+    	padding: 15px;
+		text-indent: -999px;
 
     }
-    .dropdown-list {
-    	margin-top: 50px;
+    .list {
+		height:0;
     	text-transform: uppercase;
-        display: block;
-        background: white;
+        background: black;
         text-align: center;
-
+        transition: height 0.5s;
     }
-    .dropdown-list li {
-        padding: 10px;
+    .list li {
+		display: block;
+        background-color: white;
         border: 1px solid black;
     }
-
+	.list li a{
+		color: black;
+		padding: 10px;
+	}
+    .about-section ul{
+		display: none;
+	}
     
 }

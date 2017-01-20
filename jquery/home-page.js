@@ -7,10 +7,14 @@ $(document).ready(function() {
 
 }
 }
-
-$(document).ready(function(){
-	$(".dropdown-list").slideUp();
-	$(".menu").click(function(){
-		$(".dropdown-list").slideToggle(1000);
-	});
-});
+function headerScroller(){
+	var listHeight = document.getElementById("list");
+	if(listHeight.style.height == 0){
+        listHeight.style.height = "155px";
+	}else if(listHeight.style.height == "155px"){
+		listHeight.style.height = 0;
+	}else{
+		listHeight.style.height = "155px";
+	}
+	console.log(listHeight.style.height);
+}

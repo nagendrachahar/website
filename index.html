@@ -9,6 +9,7 @@
 	</head>
 	<body>
 	    <header>
+			    <div onclick="headerScroller()" class="menu">menu</div>
 		    	<ul id="list" class="list">
 		    		<li id="portfolioButton">
 		    			<a>portfolio</a>
@@ -23,32 +24,18 @@
 		    			<a>contact</a>
 		    		</li>
 		    	</ul>
-		    	<div class="menu">menu</div>
-		    	
 		</header>
-		<ul class="dropdown-list">
-		    		<li id="portfolioButton">
-		    			<a>portfolio</a>
-		    		</li>
-		    		<li id="workButton">
-		    			<a>recent work</a>
-		    		</li>
-		    		<li id="aboutButton">
-		    			<a>about</a>
-		    		</li>
-		    		<li id="contactButton">
-		    			<a>contact</a>
-		    		</li>
-		    	</ul>
+		
+		
 	    <section id="mainUpperSection" class="main-upper-section">
 		    
 		    <section id="pop" class="upper-section">
-		    	<h1 class="visible" id="Name">shivam chahar</h1>
+		    	<h1 class="visible" id="Name">nagendra singh</h1>
 		    	<p class="visible" id="firstP">I am a web designer and front-end developer</p>
 		    	<p class="visible" id="lastP"><a href="#">check my work</a></p>
 		    </section>
 	    </section>
-	    <script src="javascript/home-page.js"></script>
+	    
 	    <section id="portfolioSection" class="portfolio-section">
 	    	<h1>portfolio</h1>
 	    	<p>Below you can see some projects I've been working on lately. I divide each project into four </p>
@@ -64,7 +51,7 @@
 	    	<p>Hi, I am Shivam.I'm a fresher in web development.</p>
 	    	<p>I am interested in web development.</p>
 	    	<h2>My Key Skills</h2>
-	    	<ul>
+	    	<ul class="key-skills-container">
 	    		<li><span class="key-skills">HTML</span><span class="status-bar"> </span></li>
 	    		<li><span class="key-skills">CSS</span><span class="status-bar"> </span></li>
 	    		<li><span class="key-skills">JavaScript</span><span class="status-bar"> </span></li>
@@ -72,9 +59,10 @@
 	    	</ul>
 	    </section>
 	    <section class="contact-section">
-	    	<h1>ok, let's create<br>something great</h1>
+	    	<h1>ok, let's create something great</h1>
 	    	<p>If you like my work and have some cool project to work on, just send<br> me direct message or contact me through social sites listed below.</p>
 	    	<p><small><a href="#">Twitter</a><a href="#">Facebook</a><a href="#">Instagram</a></small></p>
 	    </section>
+		<script src="javascript/home-page.js"></script>
 	</body>
 </html>

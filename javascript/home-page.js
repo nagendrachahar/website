@@ -45,6 +45,7 @@ window.onscroll = function() {
 	progress();
 }
 
+
 function scrollPortfolio() {
 	//for chrome
     var bodyScroll = document.documentElement.scrollTop;
@@ -120,17 +121,20 @@ function scrollWork() {
 document.getElementById("workButton").addEventListener("click", function(){
 	scrollWork();
 });
+document.getElementById("lastP").addEventListener("click", function(){
+	scrollWork();
+});
 
 function scrollAbout() {
 	//for chrome
     var bodyScroll = document.documentElement.scrollTop;
     //for firefox
     var documentScroll = document.body.scrollTop;
-        if(bodyScroll > 1250 || documentScroll > 1250){
+        if(bodyScroll > 1350 || documentScroll > 1350){
 		    var scrolltop = bodyScroll + documentScroll;
 		    var id = setInterval(frame, 1);
             function frame(){
-		        if (scrolltop < 1250) {
+		        if (scrolltop < 1350) {
 		            clearInterval(id);
 		        }
 		        else {
@@ -144,7 +148,7 @@ function scrollAbout() {
 			var scrolltop = bodyScroll + documentScroll;
 			var id = setInterval(frame, 1);
 		  	function frame(){
-		    	if (scrolltop > 1250) {
+		    	if (scrolltop > 1350) {
 		            clearInterval(id);
 		        }
 		        else {
@@ -164,11 +168,11 @@ function scrollContact() {
     var bodyScroll = document.documentElement.scrollTop;
     //for firefox
     var documentScroll = document.body.scrollTop;
-        if(bodyScroll > 1773 || documentScroll > 1773){
+        if(bodyScroll > 1600 || documentScroll > 1600){
 		    var scrolltop = bodyScroll + documentScroll;
 		    var id = setInterval(frame, 1);
             function frame(){
-		        if (scrolltop < 1773) {
+		        if (scrolltop < 1600) {
 		            clearInterval(id);
 		        }
 		        else {
@@ -182,7 +186,7 @@ function scrollContact() {
 			var scrolltop = bodyScroll + documentScroll;
 			var id = setInterval(frame, 1);
 		  	function frame(){
-		    	if (scrolltop > 1773) {
+		    	if (scrolltop > 1600) {
 		            clearInterval(id);
 		        }
 		        else {
