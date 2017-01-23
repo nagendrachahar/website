@@ -218,9 +218,10 @@ header{
     	padding: 70px 0 30px;
     }
 @media only screen and (max-width: 750px) {
-    .main-upper-section{
+    .main-upper-section,.upper-section{
     	background: black;
     }
+
     
 }
 @media only screen and (max-width: 625px) {
