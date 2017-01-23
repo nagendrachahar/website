@@ -2,9 +2,11 @@
 	padding: 0;
 	margin: 0;
 }
+/* style for all elements */
 body{
 	font-family: arial;
 }
+/* style for header */
 header{
 	z-index: 1;
 	width: 100%;
@@ -12,6 +14,7 @@ header{
 	top: 0;
 	left: 0;
 }
+/* style for ul in header */
 .list{
 	background: url(../images/ns.png) no-repeat 5px 5px;
 	background-size: 75px 75px;
@@ -34,16 +37,19 @@ header{
 .list li:hover{
 	text-decoration: underline;
 }
-.dropdown-list,.menu{
+/* style for menu when viewport is grater then 650px*/
+.menu{
 	display: none;
 }
+/* style for main-upper-section */
 .main-upper-section{
 	background:url(../images/background.jpg) no-repeat fixed;
 	background-size: 100%;
 }
+/* style for upper-section */
 .upper-section{
-	padding: 133px 0;
-	background-color: rgba(0,0,0,0.6);
+	padding: 100px 0;
+	background-color: rgba(0,0,150,0.6);
 	color: white;
 	text-align: center;
 
@@ -95,7 +101,7 @@ header{
 	color: gray;
 	background-color: rgba(125,124,125,0.1);
 	text-align: center;
-	padding: 100px 0;
+	padding: 100px 10px;
 }
 .portfolio-section h1{
 	padding-bottom: 20px;
@@ -109,7 +115,7 @@ header{
 .work-section {
 	color: white;
 	background-color: #016052;
-	padding: 100px 0;
+	padding: 100px 10px;
 	text-align: center;
 
 }
@@ -120,11 +126,12 @@ header{
 }
 .work-section p{
 	font-size: 20px;
+	padding
 }
 .about-section{
 	color: gray;
 	text-align: center;
-	padding: 80px 0;
+	padding: 50px 0;
 }
 .about-section h1{
 	text-transform: uppercase;
@@ -137,11 +144,14 @@ header{
 .about-section h2{
 	padding: 20px;
 }
-.about-section ul{
+.key-skills-cont{
+	display:none;
+}
+.key-skills-container{
 	display: inline-block;
 	border: 4px solid #016052;
 }
-.about-section ul li{
+.key-skills-container li{
 	font-size: 20px;
 	margin: 10px;
 	text-align: left;
@@ -151,14 +161,20 @@ header{
 .status-bar{
 	color: white;
 	height: 20px;
+	width:0;
 	display: inline-block;
 	background-color: #016052;
+	text-indent: -9999px;
 }
 .key-skills{
 	display: inline-block;
 	width: 120px;
 }
+.status-percent{
+	float: right;
+}
 .contact-section{
+	padding: 30px 10px;
 	text-align: center;
 	background: #016052;
     color: white;
@@ -172,47 +188,63 @@ header{
 	font-size: 20px;
 }
 .contact-section p a{
+	width: 75px;
 	text-transform: uppercase;
 	margin: 30px;
-	padding: 7px;
+	padding: 30px 0 30px 0;
 	display: inline-block;
 	text-decoration: none;
 	color: white;
 	font-size: 15px;
-	border: 1px solid white;
-	border-radius: 3px;
-	transition: background 1s;
+	text-indent: -99999px
 }
-.contact-section p a:hover{
-	background: rgba(255,255,255,0.4);
+.twitter{
+	background: url(../images/twitter.00_png_srz) no-repeat -13px -12px;
+	background-size: 100px 100px;
+	border-radius: 60px;
+}
+.facebook{
+	background: url(../images/facebook-icon-preview.png) no-repeat -13px -12px;
+	background-size: 100px 100px;
+	border-radius: 60px;
+}
+.instagram{
+	background: url(../images/instagram.jpg) no-repeat 0 0;
+	background-size: 75px 77px;
+	border-radius: 15px;
 }
 @media only screen and (max-width: 1000px){
     .upper-section{
-    	padding: 50px 0;
+    	padding: 70px 0 30px;
     }
-
-
-}
 @media only screen and (max-width: 750px) {
     .main-upper-section{
     	background: black;
     }
     
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 625px) {
 	header{
 		position:static;
 		background: black;
 	}
+	.upper-section{
+    	padding: 40px 0 20px;
+    }
     .upper-section h1{
-		padding: 50px 10px 30px 10px;
+		padding: 20px 10px 20px 10px;
 	    font-size: 50px;
     }
+    .portfolio-section,.work-section,.about-section{
+    	padding: 35px 10px;
+    }
     .portfolio-section h1,.work-section h1,.about-section h1{
+    	padding: 20px 10px;
 		font-size: 50px;
 	    
     }
     .portfolio-section p,.work-section p,.about-section p{
+    	padding: 20px 10px;
     	font-size: 18px;
     }
     .menu{
@@ -223,8 +255,7 @@ header{
     	color: white;
     	padding: 15px;
 		text-indent: -999px;
-
-    }
+	}
     .list {
 		height:0;
     	text-transform: uppercase;
@@ -235,14 +266,24 @@ header{
     .list li {
 		display: block;
         background-color: white;
-        border: 1px solid black;
+        border-top: 1px solid black;
     }
 	.list li a{
 		color: black;
 		padding: 10px;
 	}
-    .about-section ul{
+    .key-skills-container{
 		display: none;
+	}
+	.key-skills-cont{
+		display: block;
+	}
+	.key-skills-cont li{
+		list-style-type: none;
+		border: 1px solid black;
+		padding: 10px;
+        margin: 10px auto;
+        width: 100px;
 	}
     
 }

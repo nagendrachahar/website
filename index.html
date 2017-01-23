@@ -8,6 +8,7 @@
 		<script src="jquery/home-page.js"></script>
 	</head>
 	<body>
+		
 	    <header>
 			    <div onclick="headerScroller()" class="menu">menu</div>
 		    	<ul id="list" class="list">
@@ -28,8 +29,7 @@
 		
 		
 	    <section id="mainUpperSection" class="main-upper-section">
-		    
-		    <section id="pop" class="upper-section">
+		    <section id="upperSection" class="upper-section">
 		    	<h1 class="visible" id="Name">nagendra singh</h1>
 		    	<p class="visible" id="firstP">I am a web designer and front-end developer</p>
 		    	<p class="visible" id="lastP"><a href="#">check my work</a></p>
@@ -51,17 +51,41 @@
 	    	<p>Hi, I am Shivam.I'm a fresher in web development.</p>
 	    	<p>I am interested in web development.</p>
 	    	<h2>My Key Skills</h2>
+	    	<!-- key skills container for small devise-->
+	    	<ul class="key-skills-cont">
+	    		<li>HTML</li>
+	    		<li>CSS</li>
+	    		<li>JavaScript</li>
+	    		<li>jQuery</li>
+	    	</ul>
 	    	<ul class="key-skills-container">
-	    		<li><span class="key-skills">HTML</span><span class="status-bar"> </span></li>
-	    		<li><span class="key-skills">CSS</span><span class="status-bar"> </span></li>
-	    		<li><span class="key-skills">JavaScript</span><span class="status-bar"> </span></li>
-	    		<li><span class="key-skills">jQuery</span><span class="status-bar"> </span></li>
+				<li>
+					<span class="key-skills">HTML</span>
+					<span class="status-bar"id="htmlBar"></span>
+					<span class="status-percent" id="htmlStatus">100%</span>
+				</li>
+	    		<li>
+					<span class="key-skills">CSS</span>
+					<span class="status-bar" id="cssBar"></span>
+					<span class="status-percent" id="cssStatus">100%</span>
+				</li>
+	    		<li>
+					<span class="key-skills">JavaScript</span>
+					<span class="status-bar" id="javascriptBar"></span>
+					<span class="status-percent" id="javascriptStatus">100%</span>			
+				</li>
+	    		<li>
+					<span class="key-skills">jQuery</span>
+					<span class="status-bar" id="jqueryBar"></span>
+					<span class="status-percent" id="jqueryStatus">100%</span>
+				</li>
 	    	</ul>
 	    </section>
 	    <section class="contact-section">
 	    	<h1>ok, let's create something great</h1>
-	    	<p>If you like my work and have some cool project to work on, just send<br> me direct message or contact me through social sites listed below.</p>
-	    	<p><small><a href="#">Twitter</a><a href="#">Facebook</a><a href="#">Instagram</a></small></p>
+	    	<p>If you like my work and have some cool project to work on, just send</p>
+	    	<p> me direct message or contact me through social sites listed below.</p>
+	    	<p><a class="twitter" href="https://twitter.com/Nagendr01162918">Twitter</a><a class="facebook" href="https://www.facebook.com/shivamchahar0">Facebook</a><a class="instagram" href="https://www.instagram.com/nagendras.chahar/">Instagram</a></p>
 	    </section>
 		<script src="javascript/home-page.js"></script>
 	</body>

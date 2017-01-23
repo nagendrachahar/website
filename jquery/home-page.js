@@ -1,20 +1,11 @@
-function progress(){
+function progressBar(){
 	if(document.documentElement.scrollTop > 1250 || document.body.scrollTop > 1250){
-
-$(document).ready(function() {
-       $(".status-bar").animate({width:"400px"}, 2000);
-	});
-
-}
-}
-function headerScroller(){
-	var listHeight = document.getElementById("list");
-	if(listHeight.style.height == 0){
-        listHeight.style.height = "155px";
-	}else if(listHeight.style.height == "155px"){
-		listHeight.style.height = 0;
-	}else{
-		listHeight.style.height = "155px";
-	}
-	console.log(listHeight.style.height);
+			$(document).ready(function() {
+					$("#htmlBar").animate({width:"350px"}, 2000);
+					$("#cssBar").animate({width:"350px"}, 2000);
+					$("#javascriptBar").animate({width:"350px"}, 2000);
+					$("#jqueryBar").animate({width:"350px"}, 2000);
+					
+			});
+		}
 }

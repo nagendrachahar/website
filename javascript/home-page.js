@@ -1,5 +1,17 @@
+// this function used to slide down list in the header
+function headerScroller(){
+	var listHeight = document.getElementById("list");
+	if(listHeight.style.height == 0){
+        listHeight.style.height = "155px";
+	}else if(listHeight.style.height == "155px"){
+		listHeight.style.height = 0;
+	}else{
+		listHeight.style.height = "155px";
+	}
+	console.log(listHeight.style.height);
+}
+// function for mainUpperSection
 function myFunction(){
-	var nameOpacity = document.getElementById('pop');
     var Name = document.getElementById("Name");
     var firstP = document.getElementById("firstP");
     var lastP = document.getElementById("lastP");
@@ -27,7 +39,7 @@ function myFunction(){
     	lastP.className = "visible";
     }
 
-	if (bodyScroll > 625 || documentScroll > 625) {
+	if (bodyScroll > 575 || documentScroll > 575) {
 		list.style.backgroundColor = "rgba(0,0,0,1)";
 		list.style.boxShadow = "0" + " " + "5px" + " " + "15px" + " " + "gray";
 	}else {
@@ -40,22 +52,19 @@ function myFunction(){
 	
 	
 }
-window.onscroll = function() {
-	myFunction();
-	progress();
-}
 
 
-function scrollPortfolio() {
+// this function used to scroll work-section
+function scrollBody(s) {
 	//for chrome
     var bodyScroll = document.documentElement.scrollTop;
     //for firefox
     var documentScroll = document.body.scrollTop;
-        if(bodyScroll > 550 || documentScroll > 550){
+        if(bodyScroll > s || documentScroll > s){
 		    var scrolltop = bodyScroll + documentScroll;
 		    var id = setInterval(frame, 1);
             function frame(){
-		        if (scrolltop < 550) {
+		        if (scrolltop < s) {
 		            clearInterval(id);
 		        }
 		        else {
@@ -69,7 +78,7 @@ function scrollPortfolio() {
 			var scrolltop = bodyScroll + documentScroll;
 			var id = setInterval(frame, 1);
 		  	function frame(){
-		    	if (scrolltop > 550) {
+		    	if (scrolltop > s) {
 		            clearInterval(id);
 		        }
 		        else {
@@ -81,123 +90,46 @@ function scrollPortfolio() {
 		}
 }
 document.getElementById("portfolioButton").addEventListener("click", function(){
-	scrollPortfolio();
+	scrollBody(450);
 });
-
-function scrollWork() {
-	//for chrome
-    var bodyScroll = document.documentElement.scrollTop;
-    //for firefox
-    var documentScroll = document.body.scrollTop;
-        if(bodyScroll > 900 || documentScroll > 900){
-		    var scrolltop = bodyScroll + documentScroll;
-		    var id = setInterval(frame, 1);
-            function frame(){
-		        if (scrolltop < 900) {
-		            clearInterval(id);
-		        }
-		        else {
-		            scrolltop = scrolltop - 5; 
-		            document.documentElement.scrollTop = scrolltop; 
-		            document.body.scrollTop = scrolltop;
-		        }
-		    }
-        }
-		else{
-			var scrolltop = bodyScroll + documentScroll;
-			var id = setInterval(frame, 1);
-		  	function frame(){
-		    	if (scrolltop > 900) {
-		            clearInterval(id);
-		        }
-		        else {
-		            scrolltop = scrolltop + 5; 
-		            document.documentElement.scrolltop = scrolltop; 
-		            document.body.scrollTop = scrolltop;
-		        }
-		    }
-		}
-}
 document.getElementById("workButton").addEventListener("click", function(){
-	scrollWork();
+	scrollBody(950);
 });
 document.getElementById("lastP").addEventListener("click", function(){
-	scrollWork();
+	scrollBody(950);
 });
-
-function scrollAbout() {
-	//for chrome
-    var bodyScroll = document.documentElement.scrollTop;
-    //for firefox
-    var documentScroll = document.body.scrollTop;
-        if(bodyScroll > 1350 || documentScroll > 1350){
-		    var scrolltop = bodyScroll + documentScroll;
-		    var id = setInterval(frame, 1);
-            function frame(){
-		        if (scrolltop < 1350) {
-		            clearInterval(id);
-		        }
-		        else {
-		            scrolltop = scrolltop - 5; 
-		            document.documentElement.scrollTop = scrolltop; 
-		            document.body.scrollTop = scrolltop;
-		        }
-		    }
-        }
-		else{
-			var scrolltop = bodyScroll + documentScroll;
-			var id = setInterval(frame, 1);
-		  	function frame(){
-		    	if (scrolltop > 1350) {
-		            clearInterval(id);
-		        }
-		        else {
-		            scrolltop = scrolltop + 5; 
-		            document.documentElement.scrolltop = scrolltop; 
-		            document.body.scrollTop = scrolltop;
-		        }
-		    }
-		}
-}
 document.getElementById("aboutButton").addEventListener("click", function(){
-	scrollAbout();
+	scrollBody(1300);
 });
-
-function scrollContact() {
-	//for chrome
-    var bodyScroll = document.documentElement.scrollTop;
-    //for firefox
-    var documentScroll = document.body.scrollTop;
-        if(bodyScroll > 1600 || documentScroll > 1600){
-		    var scrolltop = bodyScroll + documentScroll;
-		    var id = setInterval(frame, 1);
-            function frame(){
-		        if (scrolltop < 1600) {
-		            clearInterval(id);
-		        }
-		        else {
-		            scrolltop = scrolltop - 5; 
-		            document.documentElement.scrollTop = scrolltop; 
-		            document.body.scrollTop = scrolltop;
-		        }
-		    }
-        }
-		else{
-			var scrolltop = bodyScroll + documentScroll;
-			var id = setInterval(frame, 1);
-		  	function frame(){
-		    	if (scrolltop > 1600) {
-		            clearInterval(id);
-		        }
-		        else {
-		            scrolltop = scrolltop + 5; 
-		            document.documentElement.scrolltop = scrolltop; 
-		            document.body.scrollTop = scrolltop;
-		        }
-		    }
-		}
-}
 document.getElementById("contactButton").addEventListener("click", function(){
-	scrollContact();
+	scrollBody(1700);
 });
 
+// this function used to increase width of status bar in about-container
+function progressStatus(){
+	if(document.documentElement.scrollTop > 1250 || document.body.scrollTop > 1250){
+		var num = 1;
+		var id = setInterval(framee, 18);
+		function framee(){
+			
+			if(num > 99){
+				clearInterval(id);
+			}
+			else{
+				num++;
+				document.getElementById("cssStatus").innerHTML = num + "%";
+				document.getElementById("htmlStatus").innerHTML = num + "%";
+				document.getElementById("javascriptStatus").innerHTML = num + "%";
+				document.getElementById("jqueryStatus").innerHTML = num + "%";
+			}
+		}
+		
+	}
+}
+
+
+window.onscroll = function() {
+	myFunction();
+	progressBar();
+	progressStatus();
+}
