@@ -1,14 +1,13 @@
 // this function used to slide down list in the header
 function headerScroller(){
 	var listHeight = document.getElementById("list");
-	if(listHeight.style.height == 0){
-        listHeight.style.height = "155px";
-	}else if(listHeight.style.height == "155px"){
-		listHeight.style.height = 0;
+	if(listHeight.className == "list"){
+        listHeight.className = "list-";
+	}else if(listHeight.className == "list-"){
+		listHeight.className = "list";
 	}else{
-		listHeight.style.height = "155px";
+		listHeight.style.height = "list-";
 	}
-	console.log(listHeight.style.height);
 }
 // function for mainUpperSection
 function myFunction(){
@@ -35,8 +34,10 @@ function myFunction(){
 
     if(bodyScroll > 300 || documentScroll > 300){
     	lastP.className = "hidden";
+    	document.getElementById("down").className = "hidden";
     }else{
     	lastP.className = "visible";
+    	document.getElementById("down").className = "visible";
     }
 
 	if (bodyScroll > 575 || documentScroll > 575) {
