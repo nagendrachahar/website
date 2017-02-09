@@ -94,16 +94,16 @@ document.getElementById("portfolioButton").addEventListener("click", function(){
 	scrollBody(450);
 });
 document.getElementById("workButton").addEventListener("click", function(){
-	scrollBody(950);
+	scrollBody(1125);
 });
 document.getElementById("lastP").addEventListener("click", function(){
-	scrollBody(950);
+	scrollBody(1125);
 });
 document.getElementById("aboutButton").addEventListener("click", function(){
-	scrollBody(1300);
+	scrollBody(1700);
 });
 document.getElementById("contactButton").addEventListener("click", function(){
-	scrollBody(1700);
+	scrollBody(2000);
 });
 
 // this function used to increase width of status bar in about-container
@@ -120,8 +120,8 @@ function progressStatus(){
 				num++;
 				document.getElementById("cssStatus").innerHTML = num + "%";
 				document.getElementById("htmlStatus").innerHTML = num + "%";
-				document.getElementById("javascriptStatus").innerHTML = num + "%";
-				document.getElementById("jqueryStatus").innerHTML = num + "%";
+				document.getElementById("javascriptStatus").innerHTML = num - 15 + "%";
+				document.getElementById("jqueryStatus").innerHTML = num - 20 + "%";
 			}
 		}
 		
